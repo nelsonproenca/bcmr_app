@@ -13,6 +13,6 @@ export class AppComponent {
   color: string = '';
   start$ = this.store.select(getCriticality);
 
-  title = 'Formulário de Critica';
+  title = 'Formulário de Análise de Risco';
   subtitle = 'Nivel de criticidade do contrato';
 }
