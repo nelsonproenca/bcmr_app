@@ -15,6 +15,7 @@ import { AdditionalDataComponent } from './additional-data/additional-data.compo
 import { BackComponent } from './back/back.component';
 import { SummaryComponent } from './summary/summary.component';
 import { CriticalityLevelComponent } from './criticality-level/criticality-level.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CriticalityLevelComponent } from './criticality-level/criticality-level
     BackComponent,
     SummaryComponent,
     CriticalityLevelComponent,
+    TitleComponent,
   ],
   imports: [
     BrowserModule,

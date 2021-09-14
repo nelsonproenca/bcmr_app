@@ -8,11 +8,4 @@ import { getCriticality } from 'reducer/selectors';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  constructor(private store: Store<State>) {}
-  color: string = '';
-  start$ = this.store.select(getCriticality);
-
-  title = 'Formulário de Análise de Risco';
-  subtitle = 'Nivel de criticidade do contrato';
-}
+export class AppComponent {}
