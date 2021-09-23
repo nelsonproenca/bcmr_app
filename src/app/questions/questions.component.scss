@@ -1,0 +1,21 @@
+.darker-blue {
+  background: linear-gradient(180deg, #4d41fc 0%, #378fe1 100%);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+  height: auto;
+  min-height: 30px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-top: 3px;
+}
+
+button {
+  width: 140px;
+  height: 35px;
+  color: var(--white);
+}

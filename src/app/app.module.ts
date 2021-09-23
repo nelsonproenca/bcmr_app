@@ -16,6 +16,7 @@ import { BackComponent } from './back/back.component';
 import { SummaryComponent } from './summary/summary.component';
 import { CriticalityLevelComponent } from './criticality-level/criticality-level.component';
 import { TitleComponent } from './title/title.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TitleComponent } from './title/title.component';
     SummaryComponent,
     CriticalityLevelComponent,
     TitleComponent,
+    SplashComponent,
   ],
   imports: [
     BrowserModule,

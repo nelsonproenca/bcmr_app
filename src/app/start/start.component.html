@@ -1,41 +1,44 @@
-<form [formGroup]="startForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="projeto">Projeto</label>
-    <input
-      type="text"
-      class="form-control"
-      id="projeto"
-      placeholder="Ex. Desenvolvimento de Software"
-      formControlName="projeto"
-      aria-describedby="Projeto"
-      required
-    />
+<div class="container">
+  <app-title></app-title>
+  <div class="darker">
+    <form [formGroup]="startForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="projeto">Projeto</label>
+        <input
+          type="text"
+          class="form-control"
+          id="projeto"
+          placeholder="Ex. Desenvolvimento de Software"
+          formControlName="projeto"
+          aria-describedby="Projeto"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="contrato">Contrato</label>
+        <input
+          type="text"
+          class="form-control"
+          id="contrato"
+          placeholder="Ex. Prestação de Serviços"
+          formControlName="contrato"
+          aria-describedby="Contrato"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="partes">Partes</label>
+        <input
+          type="text"
+          class="form-control"
+          id="partes"
+          placeholder="Ex. Empresa A e Empresa B"
+          formControlName="partes"
+          aria-describedby="Partes"
+          required
+        />
+      </div>
+      <button type="submit" [disabled]="!startForm.valid">Próximo</button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="contrato">Contrato</label>
-    <input
-      type="text"
-      class="form-control"
-      id="contrato"
-      placeholder="Ex. Prestação de Serviços"
-      formControlName="contrato"
-      aria-describedby="Contrato"
-      required
-    />
-  </div>
-  <div class="form-group">
-    <label for="partes">Partes</label>
-    <input
-      type="text"
-      class="form-control"
-      id="partes"
-      placeholder="Ex. Empresa A e Empresa B"
-      formControlName="partes"
-      aria-describedby="Partes"
-      required
-    />
-  </div>
-  <button type="submit" class="btn btn-primary" [disabled]="!startForm.valid">
-    Próximo
-  </button>
-</form>
+</div>

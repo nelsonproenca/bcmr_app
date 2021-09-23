@@ -37,6 +37,8 @@ export class QuestionsComponent implements OnInit {
       id: 1,
       text: 'Valor do contrato',
       description: '',
+      explanatoryText:
+        'Como o formulário foi desenvolvido para atender o maior número de pessoas e empresas possível, optamos por inserir variáveis que podem ser utilizadas por qualquer um. ​Escolha a opção conforme a sua realidade. ',
       answers: [
         { id: 1, text: 'Estratégico', rating: 50, value: 1 },
         { id: 2, text: 'Alto', rating: 15, value: 2 },
@@ -48,6 +50,8 @@ export class QuestionsComponent implements OnInit {
       id: 2,
       text: 'Concentração de mercado',
       description: '',
+      explanatoryText:
+        'A proposta aqui é avaliar a quantidade de parceiros habilitados a prestar o serviço que você ou o seu cliente desejam. Escolha a opção que mais se aproxime da sua realidade.',
       answers: [
         {
           id: 1,
@@ -73,6 +77,8 @@ export class QuestionsComponent implements OnInit {
       id: 3,
       text: 'Risco de alterar o parceiro no decorrer do contrato',
       description: '',
+      explanatoryText:
+        'Aponte, conforme seus critérios, qual o risco de trocar o parceiro contratado no meio do contrato. Esse risco pode ser financeiro, de prazo, dentre outros. ​Ex. Trocar o fornecedor de ovos para a minha fábrica de pães pode ser pequeno, pois ovos são uma commoditie relativamente fácil de se adquirir de outro fornecedor.',
       answers: [
         {
           id: 1,
@@ -98,6 +104,8 @@ export class QuestionsComponent implements OnInit {
       id: 4,
       text: 'Risco Legal',
       description: '',
+      explanatoryText:
+        'O risco neste momento não envolve somente valor, mas elementos que integram o contrato e que são importantes para o cliente ou empresa. Pense nas informações que o parceiro terá, nos acessos que ele precisará, no  volume de funcionários que atuará dentro da sua empresa, etc​',
       answers: [
         {
           id: 1,
@@ -122,7 +130,10 @@ export class QuestionsComponent implements OnInit {
     {
       id: 5,
       text: 'Risco de reputação',
-      description: '',
+      description:
+        'Avaliado em caso de descumprimento do objeto contratual ou ainda em decorrência de violação de confidencialidade.',
+      explanatoryText:
+        'Pense em elementos que integram o contrato que, uma vez levados a mercado, podem gerar uma repercussão negativa para o seu cliente. Ex. Contratar um agente que pratique um preço muito baixo e que, para chegar ao preço contratado, deixa de lado políticas de ordem trabalhista ou ambiental. Nesse caso, estamos falando de um risco alto envolvido.',
       answers: [
         {
           id: 1,
@@ -160,6 +171,7 @@ export class QuestionsComponent implements OnInit {
   questionId: number = 0;
   questionText: string = '';
   questionDescription: string = '';
+  questionExplanatoryText: string = '';
   answerText1: string = '';
   answerText2: string = '';
   answerText3: string = '';
@@ -173,6 +185,7 @@ export class QuestionsComponent implements OnInit {
     this.questionId = 0;
     this.questionText = '';
     this.questionDescription = '';
+    this.questionExplanatoryText = '';
     this.answerText1 = '';
     this.answerText2 = '';
     this.answerText3 = '';
@@ -198,6 +211,8 @@ export class QuestionsComponent implements OnInit {
     this.questionId = this.QUESTIONS[this.questionCurrent].id;
     this.questionText = this.QUESTIONS[this.questionCurrent].text;
     this.questionDescription = this.QUESTIONS[this.questionCurrent].description;
+    this.questionExplanatoryText =
+      this.QUESTIONS[this.questionCurrent].explanatoryText;
     this.answerText1 = this.QUESTIONS[this.questionCurrent].answers[0].text;
     this.answerText2 = this.QUESTIONS[this.questionCurrent].answers[1].text;
     this.answerText3 = this.QUESTIONS[this.questionCurrent].answers[2].text;
@@ -223,13 +238,13 @@ export class QuestionsComponent implements OnInit {
   showNextQuestion(): void {
     this.questionCurrent++;
 
-    this.setcriticalityLevel();
+    this.setCriticalityLevel();
 
     this.reset();
     this.loadQuestion();
   }
 
-  setcriticalityLevel(): void {
+  setCriticalityLevel(): void {
     let answerItem = this.getAnswerSelected();
 
     this.questionAnswers.push({
@@ -270,7 +285,7 @@ export class QuestionsComponent implements OnInit {
     let length = this.QUESTIONS.length - 1;
 
     if (current >= length) {
-      this.setcriticalityLevel();
+      this.setCriticalityLevel();
 
       this.store.dispatch(
         new CriticalityAction({
@@ -292,28 +307,24 @@ export class QuestionsComponent implements OnInit {
           question2: this.questionAnswers[1].answerId ?? 0,
         })
       );
+
       this.store.dispatch(
         new Question3Action({
           question3: this.questionAnswers[2].answerId ?? 0,
         })
       );
+
       this.store.dispatch(
         new Question4Action({
           question4: this.questionAnswers[3].answerId ?? 0,
         })
       );
+
       this.store.dispatch(
         new Question5Action({
           question5: this.questionAnswers[4].answerId ?? 0,
         })
       );
-      this.store.dispatch(
-        new Question1Action({
-          question1: this.questionAnswers[0].answerId ?? 0,
-        })
-      );
-
-      console.log('question1- dispatch', this.questionAnswers[0].answerId);
 
       this.router.navigate(['additional-data']);
     } else {
