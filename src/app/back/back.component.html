@@ -37,30 +37,24 @@
           </div>
         </div>
         <div class="col-md">
-          <figure>
-            <div class="form-floating mb-3">
-              <label for="riscoLegal">Risco Legal</label>
-              <input
-                type="text"
-                class="form-control"
-                id="riscoLegal"
-                formControlName="riscoLegal"
-                aria-describedby="Risco Legal"
-                placeholder="Risco Legal"
-                required
-              />
-              <div
-                class="alert alert-danger"
-                *ngIf="submitted && checkValidation.riscoLegal.invalid"
-              >
-                <span>Risco Legal não pode ser em branco.</span>
-              </div>
+          <div class="form-floating mb-3">
+            <label for="riscoLegal">Risco Legal</label>
+            <input
+              type="text"
+              class="form-control"
+              id="riscoLegal"
+              formControlName="riscoLegal"
+              aria-describedby="Risco Legal"
+              placeholder="Risco Legal"
+              required
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="submitted && checkValidation.riscoLegal.invalid"
+            >
+              <span>Risco Legal não pode ser em branco.</span>
             </div>
-            <figcaption class="blockquote-footer" style="font-size: x-small">
-              O descumprimento do contrato dará ensejo a que tipo de situação
-              para a empresa.
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </div>
       <div class="row g-2">
@@ -85,32 +79,26 @@
           </div>
         </div>
         <div class="col-md">
-          <figure>
-            <div class="form-floating mb-3">
-              <label for="riscoReputacaoPrincipal">Risco de Reputação</label>
-              <input
-                type="text"
-                class="form-control"
-                id="riscoReputacaoPrincipal"
-                formControlName="riscoReputacaoPrincipal"
-                aria-describedby="Risco de Reputação"
-                placeholder="Risco de Reputação"
-                required
-              />
-              <div
-                class="alert alert-danger"
-                *ngIf="
-                  submitted && checkValidation.riscoReputacaoPrincipal.invalid
-                "
-              >
-                <span>Risco de Reputação não pode ser em branco.</span>
-              </div>
+          <div class="form-floating mb-3">
+            <label for="riscoReputacaoPrincipal">Risco de Reputação</label>
+            <input
+              type="text"
+              class="form-control"
+              id="riscoReputacaoPrincipal"
+              formControlName="riscoReputacaoPrincipal"
+              aria-describedby="Risco de Reputação"
+              placeholder="Risco de Reputação"
+              required
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                submitted && checkValidation.riscoReputacaoPrincipal.invalid
+              "
+            >
+              <span>Risco de Reputação não pode ser em branco.</span>
             </div>
-            <figcaption class="blockquote-footer" style="font-size: x-small">
-              O descumprimento contratual, o vazamento de informações ou ainda o
-              acesso inadvertido a elementos.
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </div>
       <div class="row g-2">

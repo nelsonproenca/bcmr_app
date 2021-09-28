@@ -17,24 +17,24 @@ export const QUESTION5 = 'FormBcmr-Question5';
 
 export class Question1Action implements Action {
   readonly type = QUESTION1;
-  constructor(public payload: { question1: number }) {}
+  constructor(public payload: { question1: string }) {}
 }
 
 export class Question2Action implements Action {
   readonly type = QUESTION2;
-  constructor(public payload: { question2: number }) {}
+  constructor(public payload: { question2: string }) {}
 }
 export class Question3Action implements Action {
   readonly type = QUESTION3;
-  constructor(public payload: { question3: number }) {}
+  constructor(public payload: { question3: string }) {}
 }
 export class Question4Action implements Action {
   readonly type = QUESTION4;
-  constructor(public payload: { question4: number }) {}
+  constructor(public payload: { question4: string }) {}
 }
 export class Question5Action implements Action {
   readonly type = QUESTION5;
-  constructor(public payload: { question5: number }) {}
+  constructor(public payload: { question5: string }) {}
 }
 
 export class StartAction implements Action {

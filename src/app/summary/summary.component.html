@@ -1,17 +1,20 @@
-<div class="container">
+<div class="container-fluid bg-white">
   <div class="d-flex flex-row-reverse bd-highlight mt-3">
     <button type="button" (click)="printPage()">Imprimir</button>
     <button [routerLink]="['/']" type="button">Iniciar nova análise</button>
   </div>
 
+  <!--Status-->
   <table class="table mb-3">
-    <thead>
-      <tr>
-        <th scope="col">Status</th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
+        <th
+          scope="col"
+          class="text-center display-4"
+          style="vertical-align: middle"
+        >
+          Status
+        </th>
         <td>
           <app-criticality-level></app-criticality-level>
         </td>
@@ -19,11 +22,12 @@
     </tbody>
   </table>
 
+  <!--Inicio-->
   <table class="table mb-3">
     <thead>
       <tr>
         <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
-          Inicio
+          Início
         </th>
       </tr>
     </thead>
@@ -42,6 +46,8 @@
       </tr>
     </tbody>
   </table>
+
+  <!--Perguntas-->
   <table class="table mb-3">
     <thead>
       <tr>
@@ -52,57 +58,34 @@
     </thead>
     <tbody>
       <tr>
-        <td scope="row">Valor do contrato</td>
+        <th scope="row">Valor do contrato</th>
         <td>{{ question1 }}</td>
       </tr>
       <tr>
-        <td scope="row">Concentração de mercado</td>
+        <th scope="row">Concentração de mercado</th>
         <td>{{ question2 }}</td>
       </tr>
       <tr>
-        <td scope="row">Risco de alterar o parceiro no decorrer do contrato</td>
+        <th scope="row">Risco de alterar o parceiro no decorrer do contrato</th>
         <td>{{ question3 }}</td>
       </tr>
       <tr>
-        <td scope="row">Risco Legal</td>
+        <th scope="row">Risco Legal</th>
         <td>{{ question4 }}</td>
       </tr>
       <tr>
-        <td scope="row">Risco de reputação</td>
+        <th scope="row">Risco de reputação</th>
         <td>{{ question5 }}</td>
       </tr>
     </tbody>
   </table>
-  <table class="table mb-3">
-    <thead>
-      <tr>
-        <th scope="col" colspan="4" class="display-4" style="font-size: 2rem">
-          Informações Adicionais
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Local</th>
-        <td>{{ local }}</td>
-        <th scope="row">Data</th>
-        <td>{{ data }}</td>
-      </tr>
-      <tr>
-        <th scope="row">Diretor responsável</th>
-        <td colspan="3">{{ diretor }}</td>
-      </tr>
-      <tr>
-        <th scope="row">Comentários livres</th>
-        <td colspan="3">{{ comentariosLivres }}</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <!--Análise ponto a ponto-->
   <table class="table mb-3">
     <thead>
       <tr>
         <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
-          Verso
+          Análise ponto a ponto
         </th>
       </tr>
     </thead>
@@ -128,13 +111,50 @@
         <td>{{ riscoReputacaoPrincipal }}</td>
       </tr>
       <tr>
-        <th>Risco de reputação (Campo 2)</th>
-        <td>{{ riscoReputacaoSecundaria }}</td>
-      </tr>
-      <tr>
-        <th scope="row">Comentários</th>
-        <td>{{ comentarios }}</td>
+        <th scope="row">Comentários Adicionais</th>
+        <td>{{ comentariosAdicionais }}</td>
       </tr>
     </tbody>
   </table>
+
+  <!--Informações Adicionais-->
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col" colspan="4" class="display-4" style="font-size: 2rem">
+          Informações Adicionais
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Local</th>
+        <td>{{ local }}</td>
+        <th scope="row">Data</th>
+        <td>{{ data }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Gestor responsável pela validação</th>
+        <td>{{ diretor }}</td>
+        <th scope="row">Responsável pela análise e preenchimento</th>
+        <td>{{ responsavel }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Disclaimer -->
+  <footer>
+    <dd>
+      Disclaimer: <br />
+      <span>
+        Este formulário não constitui opinião jurídica de nenhuma espécie e
+        tampouco pode ser utilizado como elemento substitutivo de uma opinião
+        legal de um advogado. Seu desenvolvimento foi feito com base em
+        elementos técnicos vinculados às 5 dimensões comerciais dos contratos e,
+        muito embora agreguem objetividade à sua análise, não devem ser adotados
+        como ferramenta única de tomada de decisão e assunção de risco. Na
+        dúvida, consulte sempre seu advogado​.
+      </span>
+    </dd>
+  </footer>
 </div>

@@ -15,8 +15,9 @@ export class CriticalityLevelComponent implements OnInit {
   criticalityLevel$ = this.store
     .select(getCriticality)
     .subscribe((criticality) => {
-      this.className = criticality?.className ?? '';
-      this.criticalityLevelName = criticality?.criticalityLevelName ?? '';
+      this.className = criticality?.className ?? 'yellow-level';
+      this.criticalityLevelName =
+        criticality?.criticalityLevelName ?? 'Excepcional';
     });
 
   constructor(private store: Store<State>) {}

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+
+import format from 'date-fns/format';
+import ptBr from 'date-fns/locale/pt-BR';
+
 import { State } from 'reducer/reducer';
 import {
   getQuestion1,
@@ -19,11 +23,15 @@ export class RiskAnalysisComponent implements OnInit {
   contrato: string = '';
   partes: string = '';
   projeto: string = '';
-  question1: number = 0;
-  question2: number = 0;
-  question3: number = 0;
-  question4: number = 0;
-  question5: number = 0;
+  question1: string = '';
+  question2: string = '';
+  question3: string = '';
+  question4: string = '';
+  question5: string = '';
+
+  currentDate = format(new Date(), 'dd/MM/yyyy', {
+    locale: ptBr,
+  });
 
   question1$ = this.store.select(getQuestion1).subscribe((question) => {
     this.question1 = question;

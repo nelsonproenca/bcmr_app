@@ -249,6 +249,7 @@ export class QuestionsComponent implements OnInit {
 
     this.questionAnswers.push({
       answerId: answerItem?.id,
+      answerText: answerItem?.text,
       questionId: this.questionId,
       rating: answerItem?.rating,
       value: answerItem?.value,
@@ -259,19 +260,19 @@ export class QuestionsComponent implements OnInit {
 
     switch (criticalityLevel) {
       case +CriticalityLevel.Alto:
-        this.className = 'p-5 mb-2 bg-success text-white';
+        this.className = 'yellow-level';
         this.criticalityLevelName = 'Alto';
         break;
       case +CriticalityLevel.Baixo:
-        this.className = 'p-3 mb-2 bg-info text-white';
+        this.className = 'blue-level';
         this.criticalityLevelName = 'Baixo';
         break;
       case +CriticalityLevel.Medio:
-        this.className = 'p-3 mb-2 bg-warning text-dark';
+        this.className = 'green-level';
         this.criticalityLevelName = 'Médio';
         break;
       case +CriticalityLevel.Excepcional:
-        this.className = 'p-3 mb-2 bg-danger text-white';
+        this.className = 'red-level';
         this.criticalityLevelName = 'Excepcional';
         break;
       default:
@@ -298,31 +299,31 @@ export class QuestionsComponent implements OnInit {
 
       this.store.dispatch(
         new Question1Action({
-          question1: this.questionAnswers[0].answerId ?? 0,
+          question1: this.questionAnswers[0].answerText ?? '',
         })
       );
 
       this.store.dispatch(
         new Question2Action({
-          question2: this.questionAnswers[1].answerId ?? 0,
+          question2: this.questionAnswers[1].answerText ?? '',
         })
       );
 
       this.store.dispatch(
         new Question3Action({
-          question3: this.questionAnswers[2].answerId ?? 0,
+          question3: this.questionAnswers[2].answerText ?? '',
         })
       );
 
       this.store.dispatch(
         new Question4Action({
-          question4: this.questionAnswers[3].answerId ?? 0,
+          question4: this.questionAnswers[3].answerText ?? '',
         })
       );
 
       this.store.dispatch(
         new Question5Action({
-          question5: this.questionAnswers[4].answerId ?? 0,
+          question5: this.questionAnswers[4].answerText ?? '',
         })
       );
 

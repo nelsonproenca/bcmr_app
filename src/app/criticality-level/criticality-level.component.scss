@@ -2,7 +2,34 @@
   width: 150px;
   height: 150px;
   background-color: transparent;
-  border: 10px solid #ff9f55;
   border-radius: 50%;
+  border-width: 15px;
+  border-style: solid;
   margin: 0 auto;
+  position: relative;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green-level {
+  border-color: #02841f;
+}
+
+.blue-level {
+  border-color: #075e9d;
+}
+
+.red-level {
+  border-color: #f82727;
+}
+
+.yellow-level {
+  border-color: #fff405;
 }

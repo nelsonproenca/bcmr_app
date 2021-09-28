@@ -23,22 +23,22 @@ export class SummaryComponent implements OnInit {
   partes: string = '';
   projeto: string = '';
   questions: QuestionAnswer[] = [];
-  comentarios: string = '';
   concentracaoMercado: string = '';
   riscoAlterarParceiro: string = '';
   riscoLegal: string = '';
   riscoReputacaoPrincipal: string = '';
   riscoReputacaoSecundaria: string = '';
   valorContrato: string = '';
-  comentariosLivres: string = '';
+  comentariosAdicionais: string = '';
   data: string = '';
   diretor: string = '';
+  responsavel: string = '';
   local: string = '';
-  question1: number = 0;
-  question2: number = 0;
-  question3: number = 0;
-  question4: number = 0;
-  question5: number = 0;
+  question1: string = '';
+  question2: string = '';
+  question3: string = '';
+  question4: string = '';
+  question5: string = '';
 
   question1$ = this.store.select(getQuestion1).subscribe((question) => {
     this.question1 = question;
@@ -60,13 +60,13 @@ export class SummaryComponent implements OnInit {
     .select(getAdditionalData)
     .subscribe((additionalData) => {
       this.local = additionalData?.local ?? '';
-      this.comentariosLivres = additionalData?.comentariosLivres ?? '';
+      this.comentariosAdicionais = additionalData?.comentariosAdicionais ?? '';
       this.data = additionalData?.data ?? '';
       this.diretor = additionalData?.diretor ?? '';
+      this.responsavel = additionalData?.responsavel ?? '';
     });
 
   back$ = this.store.select(getBack).subscribe((back) => {
-    this.comentarios = back?.comentarios ?? '';
     this.concentracaoMercado = back?.concentracaoMercado ?? '';
     this.riscoAlterarParceiro = back?.riscoAlterarParceiro ?? '';
     this.riscoLegal = back?.riscoLegal ?? '';

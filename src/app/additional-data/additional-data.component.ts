@@ -15,10 +15,11 @@ export class AdditionalDataComponent implements OnInit {
   constructor(private router: Router, private store: Store<any>) {}
 
   additionalDataForm = new FormGroup({
-    local: new FormControl('', [Validators.required]),
-    data: new FormControl('', [Validators.required]),
-    diretor: new FormControl('', [Validators.required]),
-    comentariosLivres: new FormControl(''),
+    local: new FormControl(''),
+    data: new FormControl(''),
+    diretor: new FormControl(''),
+    responsavel: new FormControl(''),
+    comentariosAdicionais: new FormControl(''),
   });
 
   submitted = false;

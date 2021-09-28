@@ -20,11 +20,11 @@ export interface State {
   back: Back | undefined;
   start: Start | undefined;
   criticality: CriticalityLevel | undefined;
-  question1: number;
-  question2: number;
-  question3: number;
-  question4: number;
-  question5: number;
+  question1: string;
+  question2: string;
+  question3: string;
+  question4: string;
+  question5: string;
 }
 
 const initialState: State = {
@@ -32,11 +32,11 @@ const initialState: State = {
   back: undefined,
   start: undefined,
   criticality: undefined,
-  question1: 0,
-  question2: 0,
-  question3: 0,
-  question4: 0,
-  question5: 0,
+  question1: '',
+  question2: '',
+  question3: '',
+  question4: '',
+  question5: '',
 };
 
 export function reducer(state = initialState, action: FormBcmrActions): State {

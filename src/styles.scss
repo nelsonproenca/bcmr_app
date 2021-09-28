@@ -9,11 +9,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: var(--black);
-  color: #e5e5e5;
-}
-
 :root {
   --white: #fff;
   --black: #000000;
@@ -86,4 +81,9 @@ button {
   background: linear-gradient(180deg, #343434 0%, #2f2f2f 100%);
   border-radius: 50px;
   padding: 40px;
+}
+
+body {
+  background: var(--black);
+  color: #e5e5e5;
 }

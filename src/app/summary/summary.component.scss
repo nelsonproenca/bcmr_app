@@ -10,7 +10,13 @@ button {
   color: var(--white);
 }
 
-body {
-  background: var(--white) !important;
-  color: #000000 !important;
+.bg-white {
+  width: 100%;
+  overflow: hidden;
+}
+
+footer {
+  padding: 15px;
+  color: var(--gray-500);
+  font-weight: bold;
 }
