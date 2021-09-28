@@ -19,8 +19,6 @@ export class BackComponent implements OnInit {
     concentracaoMercado: new FormControl(''),
     riscoReputacaoPrincipal: new FormControl(''),
     riscoAlterarParceiro: new FormControl(''),
-    riscoReputacaoSecundaria: new FormControl(''),
-    comentarios: new FormControl(''),
   });
 
   submitted = false;
@@ -34,6 +32,6 @@ export class BackComponent implements OnInit {
   onSubmit(): void {
     let backStore: Back = this.backForm.value;
     this.store.dispatch(new BackAction({ back: backStore }));
-    this.router.navigate(['/summary']);
+    this.router.navigate(['/additional-data']);
   }
 }

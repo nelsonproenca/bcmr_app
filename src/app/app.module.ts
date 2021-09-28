@@ -17,6 +17,8 @@ import { SummaryComponent } from './summary/summary.component';
 import { CriticalityLevelComponent } from './criticality-level/criticality-level.component';
 import { TitleComponent } from './title/title.component';
 import { SplashComponent } from './splash/splash.component';
+import { RiskAnalysisComponent } from './risk-analysis/risk-analysis.component';
+import { RiskMenuComponent } from './risk-menu/risk-menu.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { SplashComponent } from './splash/splash.component';
     CriticalityLevelComponent,
     TitleComponent,
     SplashComponent,
+    RiskAnalysisComponent,
+    RiskMenuComponent,
   ],
   imports: [
     BrowserModule,

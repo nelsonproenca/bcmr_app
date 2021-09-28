@@ -1,0 +1,79 @@
+<div class="container">
+  <app-title></app-title>
+  <div class="darker">
+    <div class="row">
+      <div class="col-md-10"><h1>Governança Contratual</h1></div>
+      <div class="col-md-2"><span>São Paulo, 24/09/2021</span></div>
+    </div>
+    <h2>Dados iniciais:</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <table>
+          <tr>
+            <th>Nome do Projeto:</th>
+            <th>Partes:</th>
+            <td rowspan="4">
+              <app-criticality-level></app-criticality-level>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ projeto }}</td>
+            <td>{{ partes }}</td>
+          </tr>
+          <tr>
+            <th>Contrato:</th>
+            <th>Responsável:</th>
+          </tr>
+          <tr>
+            <td>{{ contrato }}</td>
+            <td>dfsdfsfdsdfsdfsdf</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <h2>Análise:</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row">1. Valor do Contrato:</th>
+            </tr>
+            <tr>
+              <td>Opção selecionada {{ question1 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">2.Concentração de Mercado:</th>
+            </tr>
+            <tr>
+              <td>Opção selecionada {{ question2 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                3.Risco de Alterar o Parceiro no Decorrer do Contrato:
+              </th>
+            </tr>
+            <tr>
+              <td>Opção selecionada{{ question3 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">4.Risco Legal:</th>
+            </tr>
+            <tr>
+              <td>Opção selecionada {{ question4 }}</td>
+            </tr>
+            <tr>
+              <th scope="row">5.Risco de Reputação</th>
+            </tr>
+            <tr>
+              <td>Opção selecionada {{ question5 }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="text-center">
+      <button routerLink="/splash">Voltar para o Início</button>
+    </div>
+  </div>
+</div>

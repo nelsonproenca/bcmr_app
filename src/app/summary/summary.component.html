@@ -1,142 +1,140 @@
-<div class="d-flex flex-row-reverse bd-highlight">
-  <button class="btn btn-primary" type="button" (click)="printPage()">
-    Imprimir
-  </button>
-  <button class="btn btn-secondary" [routerLink]="['/']" type="button">
-    Re-Iniciar
-  </button>
+<div class="container">
+  <div class="d-flex flex-row-reverse bd-highlight mt-3">
+    <button type="button" (click)="printPage()">Imprimir</button>
+    <button [routerLink]="['/']" type="button">Iniciar nova análise</button>
+  </div>
+
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <app-criticality-level></app-criticality-level>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
+          Inicio
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Projeto</th>
+        <td>{{ projeto }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Contrato</th>
+        <td>{{ contrato }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Partes</th>
+        <td>{{ partes }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
+          Perguntas
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">Valor do contrato</td>
+        <td>{{ question1 }}</td>
+      </tr>
+      <tr>
+        <td scope="row">Concentração de mercado</td>
+        <td>{{ question2 }}</td>
+      </tr>
+      <tr>
+        <td scope="row">Risco de alterar o parceiro no decorrer do contrato</td>
+        <td>{{ question3 }}</td>
+      </tr>
+      <tr>
+        <td scope="row">Risco Legal</td>
+        <td>{{ question4 }}</td>
+      </tr>
+      <tr>
+        <td scope="row">Risco de reputação</td>
+        <td>{{ question5 }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col" colspan="4" class="display-4" style="font-size: 2rem">
+          Informações Adicionais
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Local</th>
+        <td>{{ local }}</td>
+        <th scope="row">Data</th>
+        <td>{{ data }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Diretor responsável</th>
+        <td colspan="3">{{ diretor }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Comentários livres</th>
+        <td colspan="3">{{ comentariosLivres }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
+          Verso
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Risco Legal</th>
+        <td>{{ riscoLegal }}</td>
+      </tr>
+      <tr>
+        <th>Concentração de mercado</th>
+        <td>{{ concentracaoMercado }}</td>
+      </tr>
+      <tr>
+        <th>Risco de alterar o parceiro no decorrer do contrato</th>
+        <td>{{ riscoAlterarParceiro }}</td>
+      </tr>
+      <tr>
+        <th>Valor do Contrato</th>
+        <td>{{ valorContrato }}</td>
+      </tr>
+      <tr>
+        <th>Risco de reputação</th>
+        <td>{{ riscoReputacaoPrincipal }}</td>
+      </tr>
+      <tr>
+        <th>Risco de reputação (Campo 2)</th>
+        <td>{{ riscoReputacaoSecundaria }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Comentários</th>
+        <td>{{ comentarios }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-<table class="table mb-3">
-  <thead>
-    <tr>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <app-criticality-level></app-criticality-level>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="table mb-3">
-  <thead>
-    <tr>
-      <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
-        Inicio
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Projeto</th>
-      <td>{{ projeto }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Contrato</th>
-      <td>{{ contrato }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Partes</th>
-      <td>{{ partes }}</td>
-    </tr>
-  </tbody>
-</table>
-<table class="table mb-3">
-  <thead>
-    <tr>
-      <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
-        Perguntas
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td scope="row">Valor do contrato</td>
-      <td>{{ question1 }}</td>
-    </tr>
-    <tr>
-      <td scope="row">Concentração de mercado</td>
-      <td>{{ question2 }}</td>
-    </tr>
-    <tr>
-      <td scope="row">Risco de alterar o parceiro no decorrer do contrato</td>
-      <td>{{ question3 }}</td>
-    </tr>
-    <tr>
-      <td scope="row">Risco Legal</td>
-      <td>{{ question4 }}</td>
-    </tr>
-    <tr>
-      <td scope="row">Risco de reputação</td>
-      <td>{{ question5 }}</td>
-    </tr>
-  </tbody>
-</table>
-<table class="table mb-3">
-  <thead>
-    <tr>
-      <th scope="col" colspan="4" class="display-4" style="font-size: 2rem">
-        Informações Adicionais
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Local</th>
-      <td>{{ local }}</td>
-      <th scope="row">Data</th>
-      <td>{{ data }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Diretor responsável</th>
-      <td colspan="3">{{ diretor }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Comentários livres</th>
-      <td colspan="3">{{ comentariosLivres }}</td>
-    </tr>
-  </tbody>
-</table>
-<table class="table mb-3">
-  <thead>
-    <tr>
-      <th scope="col" colspan="2" class="display-4" style="font-size: 2rem">
-        Verso
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Risco Legal</th>
-      <td>{{ riscoLegal }}</td>
-    </tr>
-    <tr>
-      <th>Concentração de mercado</th>
-      <td>{{ concentracaoMercado }}</td>
-    </tr>
-    <tr>
-      <th>Risco de alterar o parceiro no decorrer do contrato</th>
-      <td>{{ riscoAlterarParceiro }}</td>
-    </tr>
-    <tr>
-      <th>Valor do Contrato</th>
-      <td>{{ valorContrato }}</td>
-    </tr>
-    <tr>
-      <th>Risco de reputação</th>
-      <td>{{ riscoReputacaoPrincipal }}</td>
-    </tr>
-    <tr>
-      <th>Risco de reputação (Campo 2)</th>
-      <td>{{ riscoReputacaoSecundaria }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Comentários</th>
-      <td>{{ comentarios }}</td>
-    </tr>
-  </tbody>
-</table>

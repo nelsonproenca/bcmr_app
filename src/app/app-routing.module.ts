@@ -7,14 +7,18 @@ import { AdditionalDataComponent } from './additional-data/additional-data.compo
 import { BackComponent } from './back/back.component';
 import { SummaryComponent } from './summary/summary.component';
 import { SplashComponent } from './splash/splash.component';
+import { RiskMenuComponent } from './risk-menu/risk-menu.component';
+import { RiskAnalysisComponent } from './risk-analysis/risk-analysis.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/splash', pathMatch: 'full' },
   { path: 'splash', component: SplashComponent },
   { path: 'start', component: StartComponent },
   { path: 'questions', component: QuestionsComponent },
-  { path: 'additional-data', component: AdditionalDataComponent },
+  { path: 'riskmenu', component: RiskMenuComponent },
+  { path: 'risk-analysis', component: RiskAnalysisComponent },
   { path: 'back', component: BackComponent },
+  { path: 'additional-data', component: AdditionalDataComponent },
   { path: 'summary', component: SummaryComponent },
 ];
 

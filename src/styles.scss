@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+body {
+  background: var(--black);
+  color: #e5e5e5;
+}
+
 :root {
   --white: #fff;
   --black: #000000;
@@ -47,11 +52,6 @@
   }
 }
 
-body {
-  background: var(--black);
-  color: #e5e5e5;
-}
-
 body,
 input,
 textarea,
@@ -65,16 +65,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
-  font-family: Lexend, sans-serif;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.95rem;
 }
 
 button {

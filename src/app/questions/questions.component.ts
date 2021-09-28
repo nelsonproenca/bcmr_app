@@ -326,7 +326,7 @@ export class QuestionsComponent implements OnInit {
         })
       );
 
-      this.router.navigate(['additional-data']);
+      this.router.navigate(['riskmenu']);
     } else {
       if (this.submitted && this.checkValidaiton.answer.valid) {
         this.showNextQuestion();

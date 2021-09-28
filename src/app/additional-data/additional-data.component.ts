@@ -33,19 +33,12 @@ export class AdditionalDataComponent implements OnInit {
     this.submitted = true;
     let additionalDataStore: AdditionalData = this.additionalDataForm.value;
 
-    console.warn('additionalDataStore', this.additionalDataForm.value);
-
     this.store.dispatch(
       new AdditionalDataAction({ additionalData: additionalDataStore })
     );
 
-    if (
-      this.submitted &&
-      this.checkValidation.data.valid &&
-      this.checkValidation.local.valid &&
-      this.checkValidation.diretor.valid
-    ) {
-      this.router.navigate(['/back']);
+    if (this.submitted) {
+      this.router.navigate(['/summary']);
     }
   }
 }
